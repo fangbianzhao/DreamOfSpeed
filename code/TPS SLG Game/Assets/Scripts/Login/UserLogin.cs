@@ -84,11 +84,14 @@ public class UserLogin : MonoBehaviour {
     {
         string userName = nameInputField.text;
         string password = passwordInputField.text;
-        if(userName.Length > 0 && password.Length > 0)
+        if(userName.Length > 0 && password.Length > 0 && userName.Length < 10 && password.Length < 10)
         {
             byte[] msg = MessageHandler.SetRegisterMsg(userName, password);
             //Debug.Log("send msg: " + BitConverter.ToString(msg));
             StartCoroutine(networkHost.SendBytesMessage(msg));
+        }
+        else{
+            print("请输入合法用户名和密码");
         }
     }
     //测试账号
