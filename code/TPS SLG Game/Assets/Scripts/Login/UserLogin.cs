@@ -67,7 +67,7 @@ public class UserLogin : MonoBehaviour {
 
         }
     }
-    //登录
+
     public void Login()
     {
         // add check the user input
@@ -79,26 +79,37 @@ public class UserLogin : MonoBehaviour {
         StartCoroutine (networkHost.SendBytesMessage(msg));
         GameSettings.username = userName;
     }
-    //注册
+
     public void Register()
     {
         string userName = nameInputField.text;
         string password = passwordInputField.text;
-        if(userName.Length > 0 && password.Length > 0 && userName.Length < 10 && password.Length < 10)
+        if(userName.Length > 0 && password.Length > 0)
         {
             byte[] msg = MessageHandler.SetRegisterMsg(userName, password);
             //Debug.Log("send msg: " + BitConverter.ToString(msg));
             StartCoroutine(networkHost.SendBytesMessage(msg));
         }
-        else{
-            print("请输入合法用户名和密码");
-        }
     }
-    //测试账号
-    public void TestLogin()
+
+    public void Test1Login()
     {
-        GameSettings.username = "test";
-        byte[] msg = MessageHandler.SetLoginMsg("test", "163");
+        GameSettings.username = "test1";
+        byte[] msg = MessageHandler.SetLoginMsg("test1", "163");
+        StartCoroutine(networkHost.SendBytesMessage(msg));
+    }
+
+    public void Test2Login()
+    {
+        GameSettings.username = "test2";
+        byte[] msg = MessageHandler.SetLoginMsg("test2", "163");
+        StartCoroutine(networkHost.SendBytesMessage(msg));
+    }
+
+    public void Test3Login()
+    {
+        GameSettings.username = "test3";
+        byte[] msg = MessageHandler.SetLoginMsg("test3", "163");
         StartCoroutine(networkHost.SendBytesMessage(msg));
     }
 }

@@ -15,7 +15,7 @@ C:/Users/zhangqilin/Desktop/DreamOfSpeed/MonsterHunter
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-1515
+9390
 Successfully changed project path to: C:/Users/zhangqilin/Desktop/DreamOfSpeed/MonsterHunter
 C:/Users/zhangqilin/Desktop/DreamOfSpeed/MonsterHunter
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/zhangqilin/Desktop/DreamOfSpeed/MonsterHunter
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 65.87 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 69.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.7f1 (6bd9e232123f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Resources/UnitySubsystems
@@ -63,88 +63,88 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56632
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.016037 seconds.
+Registered in 0.016689 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 47.92 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 59.78 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.579 seconds
+- Completed reload, in  0.970 seconds
 Domain Reload Profiling:
-	ReloadAssembly (579ms)
-		BeginReloadAssembly (101ms)
+	ReloadAssembly (971ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (387ms)
-			LoadAssemblies (96ms)
+		EndReloadAssembly (776ms)
+			LoadAssemblies (91ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (84ms)
+			SetupTypeCache (101ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (220ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (311ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
+				InitializePlatformSupportModulesInManaged (21ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (48ms)
+				RefreshPlugins (60ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (108ms)
-				ProcessInitializeOnLoadMethodAttributes (47ms)
+				ProcessInitializeOnLoadAttributes (162ms)
+				ProcessInitializeOnLoadMethodAttributes (67ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011602 seconds.
+Registered in 0.015789 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 Mono: successfully reloaded assembly
-- Completed reload, in  1.001 seconds
+- Completed reload, in  1.143 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1003ms)
-		BeginReloadAssembly (145ms)
+	ReloadAssembly (1145ms)
+		BeginReloadAssembly (148ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (24ms)
-		EndReloadAssembly (749ms)
-			LoadAssemblies (114ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (848ms)
+			LoadAssemblies (116ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (169ms)
+			SetupTypeCache (163ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (410ms)
+			SetupLoadedEditorAssemblies (505ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (82ms)
-				ProcessInitializeOnLoadAttributes (214ms)
-				ProcessInitializeOnLoadMethodAttributes (81ms)
-				AfterProcessingInitializeOnLoad (18ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (240ms)
+				ProcessInitializeOnLoadMethodAttributes (121ms)
+				AfterProcessingInitializeOnLoad (23ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2211 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (58.0 KB). Loaded Objects now: 2677.
-Memory consumption went from 103.2 MB to 103.1 MB.
-Total: 6.425100 ms (FindLiveObjects: 0.174500 ms CreateObjectMapping: 0.059200 ms MarkObjects: 6.079300 ms  DeleteObjects: 0.110500 ms)
+Unloading 2201 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (58.7 KB). Loaded Objects now: 2667.
+Memory consumption went from 102.2 MB to 102.1 MB.
+Total: 6.485600 ms (FindLiveObjects: 0.167900 ms CreateObjectMapping: 0.056700 ms MarkObjects: 6.138300 ms  DeleteObjects: 0.121300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,101 +159,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 110760.000367 seconds.
-  path: Assets/Animation
-  artifactKey: Guid(a36a133f3d72f0140b59a28cc79ff4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation using Guid(a36a133f3d72f0140b59a28cc79ff4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34cf25d727b9ae6c0e15a63b705fde1') in 0.005574 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 393.623465 seconds.
-  path: Assets/Scenes/Halloween_Level
-  artifactKey: Guid(996f9f09cda0357468dbfafe1c759277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Halloween_Level using Guid(996f9f09cda0357468dbfafe1c759277) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '319207fb6e20d51a7eb179ea6e0559ff') in 0.002238 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.601511 seconds.
-  path: Assets/Toon_Level_Kit
-  artifactKey: Guid(73b13536b3ff4fd419b1cc4f2603eb15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit using Guid(73b13536b3ff4fd419b1cc4f2603eb15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67267b6e1f5527bbf86ca5e457ecc739') in 0.002009 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.209605 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models
-  artifactKey: Guid(37d6272626038a3468ecfb73a5eb50c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models using Guid(37d6272626038a3468ecfb73a5eb50c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b2b6e617993b93fa3175c7aed37e1dd') in 0.002091 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.658245 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Background
-  artifactKey: Guid(a524b631e1b63c14b9830a1cd5c397f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Background using Guid(a524b631e1b63c14b9830a1cd5c397f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9ae52b272643736be36e4a822fe690') in 0.001957 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.056889 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Background/Bakground01.FBX
-  artifactKey: Guid(fafc87f1d4120482695efee76180550a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Background/Bakground01.FBX using Guid(fafc87f1d4120482695efee76180550a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6361b3c709c75e55f4f9936e91937d8') in 0.149958 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 90.702706 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Shaders
-  artifactKey: Guid(307b2e0cf494c8046afe49896b151319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Shaders using Guid(307b2e0cf494c8046afe49896b151319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62f2bacc6d7b120eb848e2226101a1b') in 0.001956 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.769870 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Scripts
-  artifactKey: Guid(bcd7dc3a3bdef9841998853a8205a55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Scripts using Guid(bcd7dc3a3bdef9841998853a8205a55c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b977b11c64197564f99bd866cd139e1') in 0.001969 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.730051 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Halloween
-  artifactKey: Guid(008eca8239988ff44acf1401fc93af67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Halloween using Guid(008eca8239988ff44acf1401fc93af67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52d5ef68c8c167db977d5ae008ffadf6') in 0.001904 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.077884 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Halloween/Cauldron01.FBX
-  artifactKey: Guid(f1aa23844d6c74c00a37d58a5eadd98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Halloween/Cauldron01.FBX using Guid(f1aa23844d6c74c00a37d58a5eadd98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbfe5a235343f60865ee06b0a3b80c49') in 0.017979 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000859 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Halloween/CoffinLid01.FBX
-  artifactKey: Guid(96840e480c1cd47cdb030b2bf19fd1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Halloween/CoffinLid01.FBX using Guid(96840e480c1cd47cdb030b2bf19fd1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f405c55e6e6749ab1415cfcdc906ba67') in 0.030821 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Halloween/Throne01.FBX
-  artifactKey: Guid(27b0978a9cf994a8780b4787901ed894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Halloween/Throne01.FBX using Guid(27b0978a9cf994a8780b4787901ed894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfcefc3306c86ada21fd129bfd4afa10') in 0.029645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Halloween/Pumpkin01.FBX
-  artifactKey: Guid(6778243e472e747d6bd4cc671b782acd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Halloween/Pumpkin01.FBX using Guid(6778243e472e747d6bd4cc671b782acd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b245fc5e9818183dcbf7cbd9f02146f7') in 0.029684 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Halloween/Scythe01.FBX
-  artifactKey: Guid(2d3abd57a01a34359bbab6e30d06ad14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Halloween/Scythe01.FBX using Guid(2d3abd57a01a34359bbab6e30d06ad14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bebbd9ca944d36e7f32a670f145b11b6') in 0.035537 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Halloween/Skeleton01.FBX
-  artifactKey: Guid(659acf1d0a1374763a966fc2666e1f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Halloween/Skeleton01.FBX using Guid(659acf1d0a1374763a966fc2666e1f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923584d6db1a39d314f5eb74b992f072') in 0.035947 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.027365 seconds.
-  path: Assets/Toon_Level_Kit/Resources/Models/Island
-  artifactKey: Guid(663120f055ceb5742b1f46800253ab03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Toon_Level_Kit/Resources/Models/Island using Guid(663120f055ceb5742b1f46800253ab03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33f6f621ae402289ef0f7611574ae649') in 0.002497 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 20982.990852 seconds.
+  path: Assets/Scenes/Halloween_Level.unity
+  artifactKey: Guid(ec3d8be4b4aea48e8953198ee4f7e6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Halloween_Level.unity using Guid(ec3d8be4b4aea48e8953198ee4f7e6b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e2d820cd115549622411d97b0742415') in 0.014016 seconds 
