@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine.AI;
 using System.IO;
 
-public class NavExport : MonoBehaviour
+public class MapExport : MonoBehaviour
 {
     #region Public Attributes  
     public Vector3 leftUpStart = Vector3.zero;
@@ -73,15 +73,15 @@ public class NavExport : MonoBehaviour
 
 }
 
-//[CustomEditor(typeof(NavExport))]
-//public class NavExportHelper : Editor
+//[CustomEditor(typeof(MapExport))]
+//public class MapExportHelper : Editor
 //{
 //    public override void OnInspectorGUI()
 //    {
 //        base.OnInspectorGUI();
 //        if (GUILayout.Button("Export"))
 //        {
-//            var exp = target as NavExport;
+//            var exp = target as MapExport;
 //            exp.Exp();
 //        }
 //    }
