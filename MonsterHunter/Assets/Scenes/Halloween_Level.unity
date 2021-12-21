@@ -178,8 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28400855445e22e4698c7532669327f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelTimeText: {fileID: 0}
-  nextLevelTimeTips: {fileID: 0}
 --- !u!114 &35953611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,8 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41662d34460ea044999a9c7e3b8da088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expSlider: {fileID: 0}
-  PLAYER_LEVEL_NEED_EXP: 
 --- !u!114 &49668438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,8 +495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e378bc199fbd343bceabbd3a16d73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 862000247}
-  moneyText: {fileID: 1715935831}
 --- !u!114 &109138744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,9 +508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c9e0011c2ed97428a4efc03b455359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 752927364}
-  gameOverText: {fileID: 0}
-  screenFader: {fileID: 0}
 --- !u!225 &109138745
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1146,23 +1137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 1451069399}
-  damageImage: {fileID: 1451069398}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour:
-    r: 1
-    g: 0
-    b: 0
-    a: 0.1
-  anim: {fileID: 0}
-  playerAudio: {fileID: 0}
-  playerMovement: {fileID: 0}
-  playerShooting: {fileID: 0}
-  isDead: 0
-  damaged: 0
 --- !u!4 &752927369
 Transform:
   m_ObjectHideFlags: 0
@@ -1196,23 +1170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f2ddd3b7c9b284cb953239edb63fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NeedleTrap: {fileID: 1155082034599790, guid: b72c5f6095221084c823c11e7661b775, type: 3}
-  IceTrap: {fileID: 1312884843988462, guid: 49998ddcb8a095f4d87e0a0b891e908a, type: 3}
-  range: 100
-  skillPointText: {fileID: 1481293840}
-  missileLevelUpRow: {fileID: 1036852738}
-  needleLevelUpRow: {fileID: 1987394527}
-  iceLevelUpRow: {fileID: 1536018018}
-  levelRowSpeed: 5
-  inNeedle: 0
-  inIce: 0
-  shootableMask: 0
-  canPut: 0
-  tempNeedleTrap: {fileID: 0}
-  tempIceTrap: {fileID: 0}
-  shootingPivot: {fileID: 0}
-  baseShaderMaterial: {fileID: 0}
-  needleShaderMaterial: {fileID: 0}
 --- !u!114 &752927371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,12 +1183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec45203ae7a1a54c9d02c355f983833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  TPCamera: {fileID: 1529484749}
-  moveVector: {x: 0, y: 0, z: 0}
-  anim: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  margin: 0.7
 --- !u!82 &752927372
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2290,8 +2241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee807c51dfb85734db5121de9f7c8beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeImage: {fileID: 0}
-  coolingTimeText: {fileID: 0}
 --- !u!114 &1106740823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2466,7 +2415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4d04a0531460d4c832ac17bafa84b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showText: {fileID: 0}
 --- !u!114 &1148655584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3714,16 +3662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170f1e302171fb34e9036811adbd863c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 752927369}
-  catchSpeedDamp: 0
-  rotationSmoothing: 60
-  controlRotation: {x: 0, y: 0, z: 0, w: 0}
-  rig: {fileID: 0}
-  pivot: {fileID: 0}
-  pivotTargetLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-  rigTargetLocalRotation: {x: 0, y: 0, z: 0, w: 0}
-  cameraVelocity: {x: 0, y: 0, z: 0}
-  playerHealth: {fileID: 0}
 --- !u!81 &1666236418
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4111,20 +4049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92cb3c06ae303743a7ddb59984e978a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 752927362}
-  Zombunny: {fileID: 1663964128402948, guid: e5171f72421770240bd7c3989fe351e3, type: 3}
-  Zombear: {fileID: 100000, guid: ea3c2728ef33e3a4d99527a86cda6465, type: 3}
-  Hellephant: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 3}
-  Missile: {fileID: 1802841495763206, guid: 0afb915ab31fa2e4bbdcb2139aef22f5, type: 3}
-  ExplosionAir: {fileID: 1518853674026010, guid: a2c72b88e3197ca4c89b36790a2dbbf5,
-    type: 3}
-  OtherPlayer: {fileID: 1601194779382968, guid: d0aee5f90de7d9a4a93fed1ea8410305,
-    type: 3}
-  NeedleTrap: {fileID: 1155082034599790, guid: b72c5f6095221084c823c11e7661b775, type: 3}
-  IceTrap: {fileID: 1312884843988462, guid: 49998ddcb8a095f4d87e0a0b891e908a, type: 3}
-  Pumpkin: {fileID: 1924802134989274, guid: 1830420fd6e771d4bb9524fbfb308a99, type: 3}
-  playerEneityRegistered: 0
-  timer: 0
 --- !u!114 &1729707362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4398,20 +4322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c63be2a8918c741863160b9d9da122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 20
-  fire1CoolingTime: 0.25
-  fire2Coolingtime: 3
-  range: 100
-  shootingPivot: {fileID: 187203270}
-  fire1Timer: 0
-  fire2Timer: 0
-  shootableMask: 0
-  gunParticles: {fileID: 0}
-  gunLine: {fileID: 0}
-  gunAudio: {fileID: 0}
-  gunLight: {fileID: 0}
-  effectsDisplayTime: 0.2
-  player: {fileID: 0}
 --- !u!108 &1884925782
 Light:
   m_ObjectHideFlags: 0
