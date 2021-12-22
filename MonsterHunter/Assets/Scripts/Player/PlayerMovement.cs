@@ -25,11 +25,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = moveVector * speed * Time.deltaTime;
         Move(movement);
 
-        // player jump
-        //if (PlayerInput.GetJumpInput() && IsGrounded())
-        //{
-        //    playerRigidbody.AddForce(Vector3.up * 3000.0f);
-        //}
+        void playerjump()
+        {
+
+            if (PlayerInput.GetJumpInput() && IsGrounded())
+            {
+                playerRigidbody.AddForce(Vector3.up * 3000.0f);
+            }
+        }
 
     }
 
