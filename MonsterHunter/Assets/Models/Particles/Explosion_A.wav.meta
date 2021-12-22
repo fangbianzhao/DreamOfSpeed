@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: a965510870aca1d4ca438b3ca729988a
 AudioImporter:
@@ -10,3 +11,17 @@ AudioImporter:
   useHardware: 0
   loopable: 0
   userData: 
+=======
+fileFormatVersion: 2
+guid: a965510870aca1d4ca438b3ca729988a
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 
+>>>>>>> a6d3e92f0b6ae705d9ce9ca975f092f00c175eca
