@@ -1,28 +1,27 @@
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
-    public int currentHealth;
+    private int originHealth = 100;
+    private int currentHealth;
+    //创建血条
     public Slider healthSlider;
     public Image damageImage;
     public AudioClip deathClip;
-    public float flashSpeed = 5f;
-    public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+    public float flashSpeed = 5;//单次伤害
 
-    Animator anim;
-    AudioSource playerAudio;
-    PlayerMovement playerMovement;
-    PlayerShooting playerShooting;
-    bool isDead;
-    bool damaged;
+    private Animator anim;
+    private AudioSource playerAudio;
+    private PlayerMovement playerMovement;
+    private PlayerShooting playerShooting;
+    private bool isDead;
+    private bool damaged;
 
-
-    void Awake ()
+    private void Awake()
     {
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
@@ -30,8 +29,7 @@ public class PlayerHealth : MonoBehaviour
         playerShooting = GetComponentInChildren<PlayerShooting>();
         currentHealth = startingHealth;
     }
-
-
+    
     void Update ()
     {
         if(damaged)
@@ -71,11 +69,5 @@ public class PlayerHealth : MonoBehaviour
         playerMovement.enabled = false;
         playerShooting.enabled = false;
     }
-
-
-    public void RestartLevel()
-    {
-        // go to restart logical
-        //SceneManager.LoadScene(0);
-    }
+    
 }

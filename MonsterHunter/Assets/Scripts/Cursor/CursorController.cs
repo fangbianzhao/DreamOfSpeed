@@ -1,12 +1,13 @@
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorController : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+public class CursorController : MonoBehaviour
+{
+    private void Start()
+    {
         Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
+        Cursor.visible = false; //隐藏鼠标
     }
 }

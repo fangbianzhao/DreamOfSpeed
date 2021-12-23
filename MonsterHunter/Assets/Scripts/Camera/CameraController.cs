@@ -1,49 +1,46 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-
-    // Const variables
-    private const float MIN_CATCH_SPEED_DAMP = 0f;
-    private const float MAX_CATCH_SPEED_DAMP = 1f;
-    private const float MIN_ROTATION_SMOOTHING = 0f;
-    private const float MAX_ROTATION_SMOOTHING = 100f;
-
-    // Serializable fields
+    //Const var
+    private const float minSpeedDamp = 0f;
+    private const float maxSpeedDamp = 1f;
+    private const float minRotation = 0f;
+    private const float maxRotation = 100f;
+    
+    
+    //Serializable var
     [SerializeField]
-    private Transform target = null; // The target to follow
+    private Transform target = null;//用来存放摄像机要跟随的物体
 
-    [SerializeField]
-    [Range(MIN_CATCH_SPEED_DAMP, MAX_CATCH_SPEED_DAMP)]
-    private float catchSpeedDamp = MIN_CATCH_SPEED_DAMP;
+    [SerializeField] [Range(minSpeedDamp, maxSpeedDamp)]
+    private float speedDamp = minSpeedDamp;
 
-    [SerializeField]
-    [Range(MIN_ROTATION_SMOOTHING, MAX_ROTATION_SMOOTHING)]
-    [Tooltip("How fast the camera rotates around the pivot")]
-    private float rotationSmoothing = 60f;
+    [SerializeField] [Range(minRotation, maxRotation)]
+    //摄像头转动的速度
+    private float rotation = 60f;
 
-    [HideInInspector]
     public Quaternion controlRotation;
 
-    // private fields
-    private Transform rig; // The root transform of the camera rig
-    private Transform pivot; // The point at which the camera pivots around
+    private Transform cameraRig;    //相机追踪物体 
+    private Transform cameraPivot;  //相机旋转的轴心
     private Quaternion pivotTargetLocalRotation; // Controls the X Rotation (Tilt Rotation)
     private Quaternion rigTargetLocalRotation; // Controlls the Y Rotation (Look Rotation)
     private Vector3 cameraVelocity; // The velocity at which the camera moves
     private PlayerHealth playerHealth;
 
-    protected virtual void Awake()
+    protected void Awake()
     {
-        this.pivot = this.transform.parent;
-        this.rig = this.pivot.parent;
+        this.cameraPivot = this.transform.parent;
+        this.cameraRig = this.cameraPivot.parent;
 
         this.transform.localRotation = Quaternion.identity;
         this.playerHealth = target.GetComponent<PlayerHealth>();
     }
-
+    
     protected virtual void FixedUpdate()
     {
         controlRotation = PlayerInput.GetMouseRotationInput();
@@ -62,7 +59,7 @@ public class CameraController : MonoBehaviour
             return;
         }
 
-        this.rig.position = Vector3.SmoothDamp(this.rig.position, this.target.transform.position, ref this.cameraVelocity, this.catchSpeedDamp);
+        this.cameraRig.position = Vector3.SmoothDamp(this.cameraRig.position, this.target.transform.position, ref this.cameraVelocity, this.speedDamp);
     }
 
     private void UpdateRotation(Quaternion controlRotation)
@@ -75,18 +72,18 @@ public class CameraController : MonoBehaviour
             // X Rotation (Tilt Rotation)
             this.pivotTargetLocalRotation = Quaternion.Euler(controlRotation.eulerAngles.x, 0f, 0f);
 
-            if (this.rotationSmoothing > 0.0f)
+            if (this.rotation > 0.0f)
             {
-                this.pivot.localRotation =
-                    Quaternion.Slerp(this.pivot.localRotation, this.pivotTargetLocalRotation, this.rotationSmoothing * Time.deltaTime);
+                this.cameraPivot.localRotation =
+                    Quaternion.Slerp(this.cameraPivot.localRotation, this.pivotTargetLocalRotation, this.rotation * Time.deltaTime);
 
-                this.rig.localRotation =
-                    Quaternion.Slerp(this.rig.localRotation, this.rigTargetLocalRotation, this.rotationSmoothing * Time.deltaTime);
+                this.cameraRig.localRotation =
+                    Quaternion.Slerp(this.cameraRig.localRotation, this.rigTargetLocalRotation, this.rotation * Time.deltaTime);
             }
             else
             {
-                this.pivot.localRotation = this.pivotTargetLocalRotation;
-                this.rig.localRotation = this.rigTargetLocalRotation;
+                this.cameraPivot.localRotation = this.pivotTargetLocalRotation;
+                this.cameraRig.localRotation = this.rigTargetLocalRotation;
             }
             // if player is still alive
             if (this.playerHealth.currentHealth > 0)
@@ -96,4 +93,5 @@ public class CameraController : MonoBehaviour
             }
         }
     }
+    
 }

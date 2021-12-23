@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Newtonsoft.Json;
 
 public class PlayerShooting : MonoBehaviour
