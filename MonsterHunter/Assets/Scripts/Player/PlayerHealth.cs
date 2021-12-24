@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int originHealth = 100;
-    private int currentHealth;
+    public int originHealth = 100;
+    public int currentHealth;
     //创建血条
     public Slider healthSlider;
     public Image damageImage;
     public AudioClip deathClip;
     public float flashSpeed = 5;//单次伤害
-
+    public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
     private Animator anim;
     private AudioSource playerAudio;
     private PlayerMovement playerMovement;
@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
         playerAudio = GetComponent <AudioSource> ();
         playerMovement = GetComponent <PlayerMovement> ();
         playerShooting = GetComponentInChildren<PlayerShooting>();
-        currentHealth = startingHealth;
+        currentHealth = originHealth;
     }
     
     void Update ()

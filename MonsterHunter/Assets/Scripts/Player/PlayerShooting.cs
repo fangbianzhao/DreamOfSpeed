@@ -44,23 +44,8 @@ public class PlayerShooting : MonoBehaviour
     {
         fire1Timer += Time.deltaTime;
         fire2Timer += Time.deltaTime;
-        MissileCoolingControl.missileCoolingTime = fire2Timer;
+        MissileCoolingController.missileCoolingTime = fire2Timer;
 
-        if (PlayerInput.GetFire1() && fire1Timer >= fire1CoolingTime && Time.timeScale != 0)
-        {
-            Shoot1 ();
-        }
-
-        if(fire1Timer >= fire1CoolingTime * effectsDisplayTime)
-        {
-            DisableEffects ();
-        }
-
-
-        if (PlayerInput.GetFire2() && fire2Timer >= fire2Coolingtime && Time.timeScale != 0)
-        {
-            Shoot2();
-        }
     }
 
     void Shoot2()
