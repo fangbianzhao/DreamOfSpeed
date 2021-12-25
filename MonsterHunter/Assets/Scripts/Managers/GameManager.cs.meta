@@ -1,3 +1,22 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: 4b229ee8211143d88275f9bdde6497c8
-timeCreated: 1640255113
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {fileID: 100078, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
+  - Zombunny: {fileID: 1663964128402948, guid: e5171f72421770240bd7c3989fe351e3, type: 3}
+  - Zombear: {fileID: 100074, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
+  - Hellephant: {fileID: 100004, guid: b77f122f451a2394898a24191c26107c, type: 3}
+  - Missile: {fileID: 100006, guid: 2dc6152ca918e0145b82ee235aed87fe, type: 3}
+  - ExplosionAir: {fileID: 1518853674026010, guid: a2c72b88e3197ca4c89b36790a2dbbf5,
+      type: 3}
+  - NeedleTrap: {fileID: 1155082034599790, guid: b72c5f6095221084c823c11e7661b775,
+      type: 3}
+  - IceTrap: {fileID: 1312884843988462, guid: 49998ddcb8a095f4d87e0a0b891e908a, type: 3}
+  - Pumpkin: {fileID: 1924802134989274, guid: 1830420fd6e771d4bb9524fbfb308a99, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

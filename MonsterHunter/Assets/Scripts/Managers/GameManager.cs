@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour {
     public GameObject Hellephant;
     public GameObject Missile;
     public GameObject ExplosionAir;
-    public GameObject OtherPlayer;
     public GameObject NeedleTrap;
     public GameObject IceTrap;
     public GameObject Pumpkin;
@@ -40,14 +39,12 @@ public class GameManager : MonoBehaviour {
 
         serverGameObjects = new Dictionary<int, Dictionary<int, GameObject>>
         {
-            { GameSettings.OTHER_PLAYER_TYPE, new Dictionary<int, GameObject>()},
             { GameSettings.MONSTER_TYPE, new Dictionary<int, GameObject>()},
             { GameSettings.MISSILE_TYPE, new Dictionary<int, GameObject>()},
         };
 
         serverGameObjectsMovement = new Dictionary<int, Dictionary<int, Vector3>>
         {
-            { GameSettings.OTHER_PLAYER_TYPE, new Dictionary<int, Vector3>()},
             { GameSettings.MONSTER_TYPE, new Dictionary<int, Vector3>()},
             { GameSettings.MISSILE_TYPE, new Dictionary<int, Vector3>()},
         };
@@ -74,7 +71,7 @@ public class GameManager : MonoBehaviour {
         }
         else
         {
-            timer += Time.deltaTime;
+            timer += Time. deltaTime;
         }
 
         // receive data to message queue

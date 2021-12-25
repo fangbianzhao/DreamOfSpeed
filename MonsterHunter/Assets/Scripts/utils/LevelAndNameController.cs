@@ -14,6 +14,6 @@ public class LevelAndNameController : MonoBehaviour {
 	
     // Update is called once per frame
     void Update () {
-        showText.text = "LV" + GameSettings.playerLevel + ": " + GameSettings.username;
+        showText.text = "LV" + GameSettings.playerLevel + "\n" + GameSettings.username;
     }
 }

@@ -29,6 +29,20 @@ public class PlayerHealth : MonoBehaviour
         playerShooting = GetComponentInChildren<PlayerShooting>();
         currentHealth = originHealth;
     }
+
+    public void TakeDamage(int amount)
+    {
+        currentHealth = currentHealth - amount;
+        playerAudio.Play();
+
+        if (currentHealth < 0)
+        {
+            playerAudio.clip = deathClip;
+            playerAudio.Play();
+            anim.SetTrigger ("Die");
+        }
+    
+    }
     
     void Update ()
     {
