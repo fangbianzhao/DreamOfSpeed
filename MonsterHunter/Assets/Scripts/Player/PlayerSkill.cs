@@ -63,24 +63,6 @@ public class PlayerSkill : MonoBehaviour {
     {
         bool canPutState = (!inIce) && (!inNeedle) && (GameSettings.playerMoney >= GameSettings.TRAP_MONEY);
 
-        if (PlayerInput.GetQ())
-        {
-            HandleQ(canPutState);
-        }
-
-        if (PlayerInput.GetE())
-        {
-            HandleE(canPutState);
-        }
-
-        MoveTempTrap();
-
-        // send put trap msg
-        if (PlayerInput.GetShirt())
-        {
-            HandleShift();
-        }
-
         int skillPoint = GameSettings.playerLevel * 2 - GameSettings.iceTrapLevel - GameSettings.needleTrapLevel
             - GameSettings.missileLevel + 3;
 
@@ -141,45 +123,7 @@ public class PlayerSkill : MonoBehaviour {
         needleLevelUpRow.text = "LV " + GameSettings.needleTrapLevel;
         iceLevelUpRow.text = "LV " + GameSettings.iceTrapLevel;
     }
-
-    void HandleQ(bool canPutState)
-    {
-        if (canPutState)
-        {
-            inIce = !inIce;
-            TryToPutIce();
-        }
-        else
-        {
-            // cancel trap
-            if (inIce)
-            {
-                Destroy(tempIceTrap);
-                tempIceTrap = null;
-                inIce = !inIce;
-            }
-        }
-    }
-
-    void HandleE(bool canPutState)
-    {
-        if (canPutState)
-        {
-            inNeedle = !inNeedle;
-            TryToPutNeedle();
-        }
-        else
-        {
-            // cancel trap
-            if (inNeedle)
-            {
-                Destroy(tempNeedleTrap);
-                tempNeedleTrap = null;
-                inNeedle = !inNeedle;
-            }
-        }
-    }
-
+    
     void HandleShift()
     {
         if (canPut)

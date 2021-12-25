@@ -3,7 +3,7 @@
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 6f;            // The speed that the player will move at.
-    public Camera TPCamera;
+    public Camera Camera;
 
     Vector3 moveVector;                 // The vector to store the direction of the player's movement.
     Animator anim;                      // Reference to the animator component.
@@ -19,17 +19,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveVector = PlayerInput.GetMovementInput(TPCamera);
+        moveVector = PlayerInput.GetMovementInput(Camera);
 
         Animating();
         Vector3 movement = moveVector * speed * Time.deltaTime;
         Move(movement);
-
-        // player jump
-        //if (PlayerInput.GetJumpInput() && IsGrounded())
-        //{
-        //    playerRigidbody.AddForce(Vector3.up * 3000.0f);
-        //}
 
     }
 
