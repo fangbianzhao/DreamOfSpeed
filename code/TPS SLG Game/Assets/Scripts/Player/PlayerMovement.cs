@@ -26,12 +26,12 @@ public class PlayerMovement : MonoBehaviour
         Move(movement);
     }
 
-    bool IsGrounded()
+    bool IsGrounded()//rigidbody collision detection
     {
         return Physics.Raycast(transform.position, -Vector3.up, margin);
     }
 
-    void Move(Vector3 movement)
+    void Move(Vector3 movement)//get movement for updating position
     {
         transform.position += movement;
     }

@@ -25,13 +25,13 @@ public class PlayerShooting : MonoBehaviour
     private NetworkHost networkHost;
 
 
-    void Awake ()
+    void Awake ()//initialize status
     {
         shootableMask = LayerMask.GetMask ("Shootable");
-        gunParticles = GetComponent<ParticleSystem> ();
-        gunLine = GetComponent <LineRenderer> ();
-        gunAudio = GetComponent<AudioSource> ();
-        gunLight = GetComponent<Light> ();
+        gunParticles = GetComponent<ParticleSystem> ();//Add gun particle component
+        gunLine = GetComponent <LineRenderer> ();//Add gun line component
+        gunAudio = GetComponent<AudioSource> ();//Add audio component
+        gunLight = GetComponent<Light> ();//Add light component
         player = GetComponentInParent<Transform>();
 
         networkHost = NetworkHost.GetInstance();
@@ -39,7 +39,7 @@ public class PlayerShooting : MonoBehaviour
         fire2Timer = fire2Coolingtime;
     }
 
-
+    //Been called per frame
     void Update ()
     {
         fire1Timer += Time.deltaTime;//Clock for shoot1
@@ -63,7 +63,7 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    void Shoot2()
+    void Shoot2()//Logic for shoot2
     {
         fire2Timer = 0f;
         //SendMissileShootMsg();
@@ -87,7 +87,7 @@ public class PlayerShooting : MonoBehaviour
         SendMissileShootMsg(towardVector);
     }
 
-    void SendMissileShootMsg(Vector3 towardVector)
+    void SendMissileShootMsg(Vector3 towardVector)//Logic for missle shooting
     {
         ClientMissileShootMsg clientMissileShootMsg = new ClientMissileShootMsg
         {
@@ -119,7 +119,7 @@ public class PlayerShooting : MonoBehaviour
     }
 
 
-    void Shoot1 ()
+    void Shoot1 ()//Logic for shoot 1
     {
         fire1Timer = 0f;//Shoot 1 cooling time is 0
 
@@ -158,7 +158,7 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    void SendPlayerAttackMsg(int damage, int monsterID, Vector3 shootPoint)
+    void SendPlayerAttackMsg(int damage, int monsterID, Vector3 shootPoint)//send player attact message to server
     {
         ClientPlayerAttackMsg clientPlayerAttackMsg = new ClientPlayerAttackMsg
         {

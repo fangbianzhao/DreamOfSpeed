@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     bool damaged;
 
 
-    void Awake ()
+    void Awake ()//Add component to game object
     {
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
         damaged = false;
     }
 
-    public void SetHealth(int health)
+    public void SetHealth(int health)//update health
     {
         if(health < currentHealth)
         {

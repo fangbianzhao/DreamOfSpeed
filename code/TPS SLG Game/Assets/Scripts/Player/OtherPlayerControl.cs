@@ -27,14 +27,14 @@ public class OtherPlayerControl : MonoBehaviour {
     float effectsDisplayTime;
     float fire1Timer;
 
-    void Awake()
+    void Awake()//Add component to game object
     {
         otherPlayerID = -1;
         otherPlayerHurtAduio = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         effectsDisplayTime = 0.2f;
 
-        foreach (Transform child in transform)
+        foreach (Transform child in transform)//initialize every child
         {
             if(child.gameObject.name == "GunBarrelEnd") {
                 gunBarrelEnd = child.gameObject;
@@ -55,7 +55,7 @@ public class OtherPlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        fire1Timer += Time.deltaTime;
+        fire1Timer += Time.deltaTime;//control fire time
 
         if (fire1Timer >= fire1CoolingTime * effectsDisplayTime)
         {
@@ -77,7 +77,7 @@ public class OtherPlayerControl : MonoBehaviour {
             healthImage.GetComponent<RectTransform>().anchoredPosition3D.y);
     }
 
-    public void DisableEffects()
+    public void DisableEffects()//disable player shooting
     {
         gunLine.enabled = false;
         gunLight.enabled = false;
@@ -88,7 +88,7 @@ public class OtherPlayerControl : MonoBehaviour {
         anim.SetBool("IsWalking", isWalking);
     }
 
-    public void Shoot(Vector3 shootPoint)
+    public void Shoot(Vector3 shootPoint)//control shooting point
     {
         fire1Timer = 0f;
 
@@ -105,7 +105,7 @@ public class OtherPlayerControl : MonoBehaviour {
         gunLine.SetPosition(1, shootPoint);
     }
 
-    public void Die()
+    public void Die()//check if the player is dead
     { 
 
         anim.SetTrigger("Die");
