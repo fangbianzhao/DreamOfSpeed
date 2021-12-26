@@ -8,8 +8,8 @@ public static class PlayerInput
 
     public static Vector3 GetMovementInput(Camera relativeCamera)
     {
-        Vector3 moveVector;
-        float horizontalAxis = Input.GetAxis("Horizontal");
+        Vector3 moveVector;//内置单位向量结构体
+        float horizontalAxis = Input.GetAxis("Horizontal");//get mouse input
         float verticalAxis = Input.GetAxis("Vertical");
 
         if (relativeCamera != null)
@@ -54,53 +54,63 @@ public static class PlayerInput
         return controlRotation;
     }
     //using Input class to chect equipment input
-    public static bool GetJumpInput()
+    public static bool GetJumpInput(
     {
+    //jump control
         return Input.GetButtonDown("Jump");
     }
 
     public static bool GetFire1()
     {
+    //fire 1 control
         return Input.GetButton("Fire1");
     }
 
     public static bool GetFire2()
     {
+    //fire 2 control
         return Input.GetButton("Fire2");
     }
 
     public static bool GetQ()
     {
+    //key q control
         return Input.GetKeyDown(KeyCode.Q);
     }
 
     public static bool GetE()
     {
+    //key e down control
         return Input.GetKeyDown(KeyCode.E);
     }
 
     public static bool GetShirt()
     {
+    //get shirt control
         return Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift);
     }
 
     public  static bool GetOne()
     {
+    //get one control
         return Input.GetKeyDown(KeyCode.Alpha1);
     }
 
     public static bool GetTwo()
     {
+    //get 2 control
         return Input.GetKeyDown(KeyCode.Alpha2);
     }
 
     public static bool GetThree()
     {
+    //get 3 control
         return Input.GetKeyDown(KeyCode.Alpha3);
     }
 
     public static bool GetR()
     {
+    //key r control
         return Input.GetKeyDown(KeyCode.R);
     }
 
