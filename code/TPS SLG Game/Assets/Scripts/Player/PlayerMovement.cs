@@ -14,23 +14,16 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        playerRigidbody = GetComponent<Rigidbody>();
+        playerRigidbody = GetComponent<Rigidbody>();//Add rigidbody pysic propertities
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() //Pysics engine checkes current status.  
     {
         moveVector = PlayerInput.GetMovementInput(TPCamera);
 
         Animating();
         Vector3 movement = moveVector * speed * Time.deltaTime;
         Move(movement);
-
-        // player jump
-        //if (PlayerInput.GetJumpInput() && IsGrounded())
-        //{
-        //    playerRigidbody.AddForce(Vector3.up * 3000.0f);
-        //}
-
     }
 
     bool IsGrounded()

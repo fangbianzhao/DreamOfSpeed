@@ -42,9 +42,9 @@ public class PlayerShooting : MonoBehaviour
 
     void Update ()
     {
-        fire1Timer += Time.deltaTime;
-        fire2Timer += Time.deltaTime;
-        MissileCoolingControl.missileCoolingTime = fire2Timer;
+        fire1Timer += Time.deltaTime;//Clock for shoot1
+        fire2Timer += Time.deltaTime;//Clock for missle
+        MissileCoolingControl.missileCoolingTime = fire2Timer;//send cooling message
 
         if (PlayerInput.GetFire1() && fire1Timer >= fire1CoolingTime && Time.timeScale != 0)
         {
@@ -112,7 +112,7 @@ public class PlayerShooting : MonoBehaviour
     }
 
 
-    public void DisableEffects ()
+    public void DisableEffects ()//Disable player shooting movement
     {
         gunLine.enabled = false;
         gunLight.enabled = false;
@@ -121,7 +121,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot1 ()
     {
-        fire1Timer = 0f;
+        fire1Timer = 0f;//Shoot 1 cooling time is 0
 
         gunAudio.Play ();
 

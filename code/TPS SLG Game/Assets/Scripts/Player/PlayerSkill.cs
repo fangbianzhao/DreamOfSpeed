@@ -63,7 +63,7 @@ public class PlayerSkill : MonoBehaviour {
     {
         bool canPutState = (!inIce) && (!inNeedle) && (GameSettings.playerMoney >= GameSettings.TRAP_MONEY);
 
-        if (PlayerInput.GetQ())
+        if (PlayerInput.GetQ())//Using Input class to get player input
         {
             HandleQ(canPutState);
         }
@@ -82,9 +82,9 @@ public class PlayerSkill : MonoBehaviour {
         }
 
         int skillPoint = GameSettings.playerLevel * 2 - GameSettings.iceTrapLevel - GameSettings.needleTrapLevel
-            - GameSettings.missileLevel + 3;
+            - GameSettings.missileLevel + 3;//Caculate skill upgrade
 
-        if (PlayerInput.GetOne())
+        if (PlayerInput.GetOne())//Logic for skill upgrade system
         {
             if(skillPoint > 0 && GameSettings.iceTrapLevel < 10)
             {
@@ -116,7 +116,7 @@ public class PlayerSkill : MonoBehaviour {
         ChangeSkillText(skillPoint);
     }
 
-    void SendSkillUpMsg(int skillType)
+    void SendSkillUpMsg(int skillType)//Send skill upgrade message to sever
     {
         ClientSkillLevelUpMsg skillLevelUpMsg = new ClientSkillLevelUpMsg();
         skillLevelUpMsg.skillType = skillType;
@@ -132,7 +132,7 @@ public class PlayerSkill : MonoBehaviour {
         StartCoroutine(networkHost.SendBytesMessage(msg));
     }
 
-    void ChangeSkillText(int skillPoint)
+    void ChangeSkillText(int skillPoint)//Using for changing text in the game
     {
 
         skillPointText.text = "Skill Point: " + skillPoint;
@@ -142,7 +142,7 @@ public class PlayerSkill : MonoBehaviour {
         iceLevelUpRow.text = "LV " + GameSettings.iceTrapLevel;
     }
 
-    void HandleQ(bool canPutState)
+    void HandleQ(bool canPutState)//using skill
     {
         if (canPutState)
         {
@@ -208,7 +208,7 @@ public class PlayerSkill : MonoBehaviour {
         }
     }
 
-    void SendPutTrapMsg(int trapType, int playerID, Vector3 trapLcoation)
+    void SendPutTrapMsg(int trapType, int playerID, Vector3 trapLcoation)//Send skill using message to sever 
     {
         ClientPutTrapMsg clientPutTrapMsg = new ClientPutTrapMsg();
         clientPutTrapMsg.trapType = trapType;
@@ -225,7 +225,7 @@ public class PlayerSkill : MonoBehaviour {
         StartCoroutine(networkHost.SendBytesMessage(msg));
     }
 
-    void PutTrap()
+    void PutTrap()//Logic for putting trap
     {
         if(tempIceTrap != null)
         {
@@ -264,7 +264,7 @@ public class PlayerSkill : MonoBehaviour {
         tempNeedleTrap = null;
     }
 
-    void MoveTempTrap()
+    void MoveTempTrap()//Logic for presetting trap
     {
         Vector3 targetPoint = GetTargetPoint();
 

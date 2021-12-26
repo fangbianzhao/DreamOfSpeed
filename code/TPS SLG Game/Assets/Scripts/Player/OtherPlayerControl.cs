@@ -65,7 +65,7 @@ public class OtherPlayerControl : MonoBehaviour {
         healthImage.transform.LookAt(Camera.main.transform);
     }
 
-    public void SetHealthImage()
+    public void SetHealthImage()//check player health
     {
         float health_value = GameSettings.HEALTH_INIT_WIDTH * otherPlayerHealth / GameSettings.PLAYER_INIT_HEALTH;
         healthImage.GetComponent<RectTransform>().sizeDelta = new Vector2(
@@ -83,7 +83,7 @@ public class OtherPlayerControl : MonoBehaviour {
         gunLight.enabled = false;
     }
 
-    public void SetWalking(bool isWalking)
+    public void SetWalking(bool isWalking)//Set status
     {
         anim.SetBool("IsWalking", isWalking);
     }

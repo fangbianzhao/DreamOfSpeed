@@ -45,7 +45,7 @@ public static class PlayerInput
         lookAngle += mouseX * mouseSensitivity;
         lookAngle %= 360f;
 
-        // Adjust the tilt angle (X Rotation)
+        // Adjust the tilt angle (X Rotation) used by camera 
         tiltAngle += mouseY * mouseSensitivity;
         tiltAngle %= 360f;
         tiltAngle = MathfExtensions.ClampAngle(tiltAngle, minTiltAngle, maxTiltAngle);
@@ -53,7 +53,7 @@ public static class PlayerInput
         var controlRotation = Quaternion.Euler(-tiltAngle, lookAngle, 0f);
         return controlRotation;
     }
-
+    //using Input class to chect equipment input
     public static bool GetJumpInput()
     {
         return Input.GetButtonDown("Jump");
