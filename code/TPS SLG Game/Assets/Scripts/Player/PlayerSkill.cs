@@ -30,7 +30,7 @@ public class PlayerSkill : MonoBehaviour {
 
     NetworkHost networkHost;
 
-    private void Awake()
+    private void Awake()//initialize status
     {
         inNeedle = false;
         inIce = false;
@@ -161,7 +161,7 @@ public class PlayerSkill : MonoBehaviour {
         }
     }
 
-    void HandleE(bool canPutState)
+    void HandleE(bool canPutState)//check status 
     {
         if (canPutState)
         {
@@ -180,7 +180,7 @@ public class PlayerSkill : MonoBehaviour {
         }
     }
 
-    void HandleShift()
+    void HandleShift()//check status
     {
         if (canPut)
         {
@@ -314,7 +314,7 @@ public class PlayerSkill : MonoBehaviour {
         }
     }
 
-    bool CheckTempTrap(GameObject tempTrap)
+    bool CheckTempTrap(GameObject tempTrap)//Logic for presetting trap
     {
         if (tempTrap.transform.position.y > GameSettings.ENVIRONMENT_FLOOR_HEIGHT + 0.02f)
             return false;
@@ -328,7 +328,7 @@ public class PlayerSkill : MonoBehaviour {
         return colliders.Length == 0;
     }
 
-    Vector3 GetTargetPoint()
+    Vector3 GetTargetPoint()//Logic for get target point
     {
         RaycastHit shootHit;
         shootRay.origin = shootingPivot.transform.position;
@@ -344,7 +344,7 @@ public class PlayerSkill : MonoBehaviour {
         return targetPoint;
     }
 
-    void TryToPutNeedle()
+    void TryToPutNeedle()//Trap puttiung logic control
     {
         Vector3 targetPoint = GetTargetPoint();
         tempNeedleTrap = Instantiate(NeedleTrap, targetPoint, new Quaternion(0, 0, 0, 1));
@@ -352,7 +352,7 @@ public class PlayerSkill : MonoBehaviour {
         tempNeedleTrap.GetComponent<BoxCollider>().enabled = false;
     }
 
-    void TryToPutIce()
+    void TryToPutIce()//Ice trap putting logic control
     {
         Vector3 targetPoint = GetTargetPoint();
         tempIceTrap = Instantiate(IceTrap, targetPoint, new Quaternion(0, 0, 0, 1));
